@@ -9,7 +9,7 @@ PR = "r0"
 
 # NOTE: SciTECO's repository uses submodules, therefore the submodule
 # fetcher must be used.
-SRC_URI = "gitsm://github.com/rhaberkorn/sciteco.git;protocol=https;rev=${PV}"
+SRC_URI = "gitsm://github.com/rhaberkorn/sciteco.git;protocol=https"
 
 S = "${WORKDIR}/git"
 
