@@ -1,19 +1,15 @@
 DESCRIPTION = "Advanced TECO dialect and interactive screen editor based on Scintilla"
-HOMEPAGE = "http://sciteco.sf.net/"
+HOMEPAGE = "https://rhaberkorn.github.io/sciteco/"
 SECTION = "console/utils"
 
 LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
-PR = "r0"
-
 SRC_URI = "gitsm://github.com/rhaberkorn/sciteco.git;protocol=https;branch=master"
 
 S = "${WORKDIR}/git"
 
-# SciTECO does not support out-of-tree builds out of the box since
-# Scintilla doesn't.
-inherit autotools-brokensep pkgconfig
+inherit autotools pkgconfig
 
 # Since we are cross-compiling, bootstrapping cannot work.
 # Instead there must be a native sciteco available.
